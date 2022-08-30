@@ -11,6 +11,11 @@ async function bootstrap() {
     new ValidationPipe({
       whitelist: true,
       forbidNonWhitelisted: true,
+      transform: true,
+      transformOptions: { // para tansformar a strin las validaciones @query
+        enableImplicitConversion: true
+      }
+
     }),
   );
 
